@@ -2,20 +2,18 @@
 
 int main(void)
 {
-    // input
-    int speed = 0; // km/h
-    int time = 0; // hrs
+    float x = 5.2;
+    double y = -9.8;
 
-    printf("Speed: ");
-    scanf("%d", &speed);
-    printf("Time: ");
-    scanf("%d", &time);
+    printf("x: ");
+    // single-precision floating point
+    scanf("%f", &x);
+    // double-precision floating point
+    printf("x: %f\n", x);
 
-    // processing
-    int distance = speed * time;
-
-    // output
-    printf("dist: %d\n", distance);
+    printf("y: ");
+    scanf("%lf", &y);
+    printf("y: %f\n", y);
 
     return 0;
 }
