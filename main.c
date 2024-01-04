@@ -2,18 +2,16 @@
 
 int main(void)
 {
-    int grade = 0;
-    printf("Grade ");
-    scanf("%d", &grade);
+    int height = 0;
+    printf("height: ");
+    scanf("%d", &height);
 
-   if (grade >= 90) printf("A\n");
-   else if (grade >= 80) printf("B\n");
-   else if (grade >= 70) printf("C\n");
-   else if (grade >= 60)
-    {
-        printf("D\n");
-    }
-   else printf("Fail\n");
+    if (height != 160)
+        printf("height is not 160!\n");
+    else
+        printf("Height is 160!\n");
+
+
 
     return 0;
 }
