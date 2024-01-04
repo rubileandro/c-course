@@ -3,11 +3,10 @@
 int main(void)
 {
     //modulus
-    int x = 11, y = 3;
+    int x = 14;
 
-    int div = x / y;
-    int mod = x % y;
+    int mod = x % 2;
+    printf("mod: %d\n", mod);
 
-    printf("div: %d\n", div);
-    printf("div: %d\n", mod);
+    return 0;
 }
