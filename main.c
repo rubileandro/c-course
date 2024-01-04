@@ -1,17 +1,16 @@
-/*
-Author: Rubi
-Program: Hello, World!
-Description: This program prints hello, world to the screen!
- */
-
 #include <stdio.h>
 
 int main(void)
 {
-    // print 3 lines
-    printf("Hello, World\n");
-    printf("Line 2!\n"); // line 2
-    printf("Line3!\n");
+    // input
+    int speed = 60; // km/h
+    int time = 7; // hrs
+
+    // processing
+    int distance = speed * time;
+
+    // output
+    printf("dist: %d\n", distance);
 
     return 0;
 }
