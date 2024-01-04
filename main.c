@@ -2,11 +2,23 @@
 
 int main(void)
 {
-    //modulus
-    int x = 14;
+    int grade = 0;
 
-    int mod = x % 2;
-    printf("mod: %d\n", mod);
+    printf("Grade ");
+    scanf("%d", &grade);
+
+    if (grade >= 50)
+    {
+        printf("Pass\n");
+        printf("Congrats!\n");
+    }
+    else
+    {
+        printf("Fail\n");
+        printf("Good luck next time!\n");
+    }
+
+    printf("If done\n");
 
     return 0;
 }
