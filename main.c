@@ -2,21 +2,25 @@
 
 int main(void)
 {
-    int height = 0;
-    printf("height: ");
-    scanf("%d", &height);
+    int i = 0;
+    int number = 0;
+    int total = 0;
 
-    int weight = 0;
-    printf("weight: ");
-    scanf("%d", &weight);
+    int total_numbers = 0;
 
-//    if (height > 150 || weight > 50)
-//        printf("Good to ride!\n");
+    printf("How many numbers: ");
+    scanf("%d", &total_numbers);
 
-    if (height > 150 || weight > 50)
-        printf("Good to ride!\n");
-    else
-        printf("Not good to ride!\n");
+    while (i < total_numbers)
+    {
+        printf("Enter Number $d: ", i+1);
+        scanf("%d", &number);
+        total = total + number;
+        i ++;
+    }
+    printf("total: %d\n", total);
+    // work out average
+    printf("Average: %d\n", total / 5);
 
     return 0;
 }
