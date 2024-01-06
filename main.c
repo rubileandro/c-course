@@ -2,25 +2,18 @@
 
 int main(void)
 {
-    int i = 0;
+    // assuming positive nums only
     int number = 0;
-    int total = 0;
+    int max = -1;
 
-    int total_numbers = 0;
-
-    printf("How many numbers: ");
-    scanf("%d", &total_numbers);
-
-    while (i < total_numbers)
+    while (number != -1)
     {
-        printf("Enter Number $d: ", i+1);
+        printf("Enter a number: ");
         scanf("%d", &number);
-        total = total + number;
-        i ++;
+        if (number > max) max = number;
     }
-    printf("total: %d\n", total);
-    // work out average
-    printf("Average: %d\n", total / total_numbers);
+    printf("max: %d\n", max);
+
 
     return 0;
 }
