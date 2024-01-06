@@ -20,7 +20,7 @@ int main(void)
     }
     printf("total: %d\n", total);
     // work out average
-    printf("Average: %d\n", total / 5);
+    printf("Average: %d\n", total / total_numbers);
 
     return 0;
 }
