@@ -2,14 +2,16 @@
 
 int main(void)
 {
+    int number = 0;
 
-    int i = 10;
-
-    while (i < 20)
+    do
     {
-        printf("i: %d", i);
-        i --;
-    }
+        printf("Enter number (>0):");
+        scanf("%d", &number);
+        if (number <=0)
+            printf("Number must be >0!\n");
+    } while (number <= 0);
+
 
 
     return 0;
