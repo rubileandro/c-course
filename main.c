@@ -2,17 +2,14 @@
 
 int main(void)
 {
-    // assuming positive nums only
-    int number = 0;
-    int max = -1;
 
-    while (number != -1)
+    int i = 10;
+
+    while (i < 20)
     {
-        printf("Enter a number: ");
-        scanf("%d", &number);
-        if (number > max) max = number;
+        printf("i: %d", i);
+        i --;
     }
-    printf("max: %d\n", max);
 
 
     return 0;
