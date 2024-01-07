@@ -2,17 +2,11 @@
 
 int main(void)
 {
-    int number = 0;
 
-    do
+    for (int i = 0; i < 10; i++)
     {
-        printf("Enter number (>0):");
-        scanf("%d", &number);
-        if (number <=0)
-            printf("Number must be >0!\n");
-    } while (number <= 0);
-
-
+        printf("i: %d\n", i);
+    }
 
     return 0;
 }
