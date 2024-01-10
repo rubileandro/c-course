@@ -1,15 +1,21 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 int main(void)
 {
-    char s1[] = "This is a string.";
-    char s2[] = "This is A string.";
+    char s[] = "This IS tHe Way.";
 
-    if (strcmp(s1,s2) == 0)
-        printf("s1 and s2 are equal.\n");
-    else
-        printf("s1 and s1 are not equal.\n");
+    int length = strlen(s);
+    for (int i = 0; i < length; i++)
+    {
+        printf("%c ", s[i]);
+        if (isupper(s[i]))
+            printf("Upper\n");
+        else if (islower(s[i]))
+            printf("Lower\n");
+        else printf("\n");
+    }
 
     return 0;
 }
