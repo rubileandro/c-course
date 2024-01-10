@@ -1,21 +1,22 @@
 #include <stdio.h>
+#include <string.h>
 
 int main(void)
 {
 
-    char s1[20];
+    char s1[] = "This is the way.";
 
-    printf("Enter: ");
-    scanf("%s", s1);
+    int length = strlen(s1);
+    int num_is = 0;
 
-    int i = 0;
-    while (s1[i] != '\0')
-    {
-        if (s1[i] == '0')
-            printf("found 0\n");
-        i ++;
-    }
-    printf("s1: %s\n", s1);
+    for (int i = 0; i < length; i++)
+        if (s1[i] == 'i') num_is++;
+
+    printf("Length: %d\n", length);
+    printf("Number of is: %d\n", num_is);
+
+
+
 
 
     return 0;
