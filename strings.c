@@ -5,23 +5,18 @@
 int main(void)
 {
     char s[] = "This IS tHe Way.";
+    printf("s: %s\n",s);
 
-    s[0] = tolower(s[0]);
-
-    printf("s: %s\n", s);
-
-    /*
     int length = strlen(s);
     for (int i = 0; i < length; i++)
     {
-        printf("%c ", s[i]);
         if (isupper(s[i]))
-            printf("Upper\n");
+            s[i] = tolower(s[i]);
         else if (islower(s[i]))
-            printf("Lower\n");
-        else printf("\n");
+            s[i] = toupper(s[i]);
     }
-    */
+    printf("s: %s\n", s);
+
 
     return 0;
 }
