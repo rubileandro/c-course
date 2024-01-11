@@ -1,25 +1,25 @@
 #include <stdio.h>
 
-double add(double x, double y);
-
-float triple(float n);
+double mult(double x, double y);
+double power(double x, int n);
 
 int main(void)
 {
-    printf("%f\n", add(10.5, 5.9) );
+    printf("%f\n", power(2, 3) );
+    printf("%f\n", power(2, 1) );
+    printf("%f\n", power(5.8, 9) );
 
     return 0;
 }
 
-float triple(float n)
+double mult(double x, double y) { return x * y; }
 
+double power(double x, int n)
 {
-    n = n * 3;
-    return n;
-}
-
-double add(double x, double y)
-{
-    double result = x + y;
+    double result = x;
+    for (int i = 1; i < n; i++)
+    {
+        result = mult(result, x);
+    }
     return result;
 }
