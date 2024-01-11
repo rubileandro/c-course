@@ -1,17 +1,19 @@
 #include <stdio.h>
 
-int find_max(int a, int b);
+float triple(float n);
 
 int main(void)
 {
-    int max = find_max(10, 12) + 10;
-    printf("Result: %d\n", max);
+    float x = 5.0;
+    x = triple(x);
+    printf("x: %f\n", x);
 
     return 0;
 }
 
-int find_max(int a, int b)
+float triple(float n)
+
 {
-if (a > b) return a;
-else return b;
+    n = n * 3;
+    return n;
 }
