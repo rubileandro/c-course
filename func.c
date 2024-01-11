@@ -1,25 +1,17 @@
 #include <stdio.h>
 
-double mult(double x, double y);
-double power(double x, int n);
+void print_two(float a, float b);
 
 int main(void)
 {
-    printf("%f\n", power(2, 3) );
-    printf("%f\n", power(2, 1) );
-    printf("%f\n", power(5.8, 9) );
+    float x = 2.5, y = 4.2;
+    print_two(x, y);
+
 
     return 0;
 }
 
-double mult(double x, double y) { return x * y; }
-
-double power(double x, int n)
+void print_two(float a, float b)
 {
-    double result = x;
-    for (int i = 1; i < n; i++)
-    {
-        result = mult(result, x);
-    }
-    return result;
+    printf("%f\n%f\n", a,b);
 }
