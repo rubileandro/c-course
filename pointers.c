@@ -4,22 +4,10 @@ void add_one(int *array, int length);
 
 int main(void)
 {
-
-    int a[] = {1,2,3};
-    int *p;
-    p = a;
-
-    printf("p: %p\n", p );
-    printf("a: %p\n", a );
-
-    printf("p[2] = %d\n", p[2]);
-    printf("a[2] = %d\n", a[2]);
-
-    printf("*(p + 1) = %d\n", *(p + 1) );
-    printf("*(p + 2) = %d\n", *(p + 2) );
-
-    printf("*(a + 1) = %d\n", *(a + 1) );
-    printf("*(a + 2) = %d\n", *(a + 2) );
+    int a[] = {1,2,3,4,5,6,7,8,9,10};
+    add_one(a + 5, 5);
+    for (int i = 0; i < 10; i++)
+        printf("a[%d] = %d\n", i, a[i]);
 
     return 0;
 }
