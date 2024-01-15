@@ -1,35 +1,36 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 typedef struct
 {
-    char first_name[50];
-    char last_name[50];
-    int age;
-} Student;
+    int data1;
+    int *array;
+} Info;
 
-void print_student(Student s);
 
 int main(void)
 {
-    Student s1;
-    s1.age = 20;
-    strcpy(s1.first_name, "Devon");
-    strcpy(s1.last_name, "smith");
+    Info a;
+    a.data1 = 7;
+    a.array = malloc(sizeof(int) * 5);
+    for (int i = 0; i < 5; i++)
+        a.array[i] = i + 1;
 
-    print_student(s1);
-    printf("\n%s %s \n", s1.first_name,
-           s1.last_name);
-    printf("Age: %d\n", s1.age);
+    Info b = a;
+    printf("b.data1: %d\n", b.data1);
+    for (int i = 0; i < 5; i++)
+        printf("b.array[%d = %d\n", i , b.array[i]);
+
+    printf("a.array: %p\n", a.array);
+    printf("b.array: %p\n", b.array);
+
+    b.array[0] = 10;
+    for (int i = 0; i < 5; i++)
+        printf("b.array[%d = %d\n", i , b.array[i]);
+
+
+    free(a.array);
 
     return 0;
-}
-
-void print_student(Student s)
-{
-    printf("%s %s \n", s.first_name,
-                              s.last_name);
-    printf("Age: %d\n", s.age);
-    s.age = 25;
-    s.first_name[0] = 'K';
 }
