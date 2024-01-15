@@ -1,31 +1,35 @@
 #include <stdio.h>
+#include <string.h>
 
-struct Point
+typedef struct
 {
-    int x;
-    int y;
-};
+    char first_name[50];
+    char last_name[50];
+    int age;
+} Student;
+
+void print_student(Student s);
 
 int main(void)
 {
-    struct Point p1;
-    p1.x = 5;
-    p1.y = 3;
-    printf("(%d, %d)\n", p1.x, p1.y);
+    Student s1;
+    s1.age = 20;
+    strcpy(s1.first_name, "Devon");
+    strcpy(s1.last_name, "smith");
 
-    struct Point p2;
-    p2.x = 10;
-    p2.y = 4;
-    printf("(%d, %d)\n", p2.x, p2.y);
-
-//    struct Point p3 = {1,2};
-//    printf("(%d, %d)\n", p3.x, p1.y);
-
-    struct Point p4 =
-            {.y = 7,
-             .x = 6
-            };
-    printf("(%d, %d)\n", p4.x, p4.y);
+    print_student(s1);
+    printf("\n%s %s \n", s1.first_name,
+           s1.last_name);
+    printf("Age: %d\n", s1.age);
 
     return 0;
+}
+
+void print_student(Student s)
+{
+    printf("%s %s \n", s.first_name,
+                              s.last_name);
+    printf("Age: %d\n", s.age);
+    s.age = 25;
+    s.first_name[0] = 'K';
 }
